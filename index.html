@@ -9,8 +9,8 @@
     <title>Document</title>
     <style>
         .ticket {
-            width: 320px;
-            max-width: 320px;
+            width: 340px;
+            max-width: 340px;
         }
 
         .centrar {
@@ -34,13 +34,16 @@
         .dato-titulo {
             font-weight: bold;
             font-family: 'Times New Roman', serif;
+
         }
 
         .dato {
             font-family: 'Courier New', serif;
+
         }
 
-        h2,
+
+        h3,
         p {
             margin: 0;
             padding: 0;
@@ -51,12 +54,16 @@
         .info-pago2,
         .texto-condiciones {
             text-align: justify;
+            font-size: 15px;
+
         }
 
         td,
         th {
             border-right: 1px;
             border-right-style: double;
+            font-size: 14px;
+
         }
 
         .numero-cuota {
@@ -77,29 +84,42 @@
         }
 
         .totales {
-            border-top: 1px;
+            border-top: 3px;
             border-top-style: double;
+            border-bottom: 1px;
+            border-bottom-style: double;
             text-align: right;
             font-weight: bold;
         }
-        .cuotas{
+
+        .cuotas {
             text-align: right;
+        }
+
+        @media  print {
+
+            .oculto-impresion,
+            .oculto-impresion * {
+                display: none !important;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="ticket">
+        <div class="logo centrar">
+            <img src="https://cdn-5f09f103c1ac181b540e47c8.closte.com/wp-content/uploads/2020/09/tu-logo-aqui-1024x1024.png" alt="">
+            
+        </div>
         <div class="encabezado centrar">
-            <div class="logo">
-                <img src="https://images.app.goo.gl/Shy8L5cDxhwVVVVh7" alt="">
-            </div>
+
             <div class="aliado">
-                <h2>Comercializadora Arturo Calle S.A.S.</h2>
+                <h3>Comercializadora Arturo Calle S.A.S.</h3>
                 <p>Nit: 900.342.297-2</p>
             </div>
             <div class="almacen">
-                <h2>Arturo Calle - Unicentro Cali</h2>
+                <h3>Arturo Calle - Unicentro Cali</h3>
                 <p>Carrera 100 No 5-169 Local 3-33</p>
                 <p>Cali, Valle del Cauca</p>
                 <p>Tel: (604) 523-6784 </p>
@@ -107,11 +127,12 @@
         </div>
         <div class="cuerpo">
             <div class="titulo centrar">
-                <h3>Comprobante de Compra a Crédito</h3>
+                <h2>Comprobante de Venta a Crédito</h2>
             </div>
             <div class="datos-credito">
                 <ul>
-                    <li><span class="dato-titulo">Fecha: </span><span class="dato">2022-08-01 07:44:04</span></li>
+                    <li><span class="dato-titulo">Fecha: </span><span
+                            class="dato">1-Aug-2022 13:30:16</span></li>
                     <li><span class="dato-titulo">Crédito No.: </span><span class="dato">0023851</span></li>
                     <li><span class="dato-titulo">Valor del Crédito: </span><span class="dato">$100.000</span></li>
                     <li><span class="dato-titulo">Deudor: </span><span class="dato">Maria Piedad Perez Perez</span>
@@ -124,7 +145,7 @@
             </div>
             <div class="info-cashback">
                 * El cliente se hará acreedor de este “Cashback” si paga la totalidad de este crédito el
-                2022-12-01 o antes.
+                1-Dec-2022 o antes.
             </div>
             <div class="plan-pago">
                 <div class="titulo centrar">
@@ -135,42 +156,42 @@
                         <tr>
                             <th>Cuota</th>
                             <th>Fecha</th>
-                            <th>A tiempo</th>
-                            <th>Retrasado*</th>
+                            <th>Pago a tiempo</th>
+                            <th>Pago Retrasado*</th>
                         </tr>
                     </thead>
                     <tbody>
-                                                <tr>
-                            <td class="numero-cuota">1</td>
-                            <td>2022-09-01</td>
-                            <td class="cuotas">$25.000</td>
-                            <td class="cuotas">$26.000+Mora</td>
-                        </tr>
-                                                                        <tr>
-                            <td class="numero-cuota">2</td>
-                            <td>2022-10-01</td>
-                            <td class="cuotas">$25.000</td>
-                            <td class="cuotas">$26.000+Mora</td>
-                        </tr>
-                                                                        <tr>
-                            <td class="numero-cuota">3</td>
-                            <td>2022-11-01</td>
-                            <td class="cuotas">$25.000</td>
-                            <td class="cuotas">$26.000+Mora</td>
-                        </tr>
-                                                                        <tr>
-                            <td class="numero-cuota">4</td>
-                            <td>2022-12-01</td>
-                            <td class="cuotas">$25.000</td>
-                            <td class="cuotas">$26.000+Mora</td>
-                        </tr>
-                                                                       
+                                                    <tr>
+                                <td class="numero-cuota dato">1</td>
+                                <td class="dato">1-Sep-2022</td>
+                                <td class="cuotas dato">25.000</td>
+                                <td class="cuotas dato">26.000+Mora</td>
+                            </tr>
+                                                                                <tr>
+                                <td class="numero-cuota dato">2</td>
+                                <td class="dato">1-Oct-2022</td>
+                                <td class="cuotas dato">25.000</td>
+                                <td class="cuotas dato">26.000+Mora</td>
+                            </tr>
+                                                                                <tr>
+                                <td class="numero-cuota dato">3</td>
+                                <td class="dato">1-Nov-2022</td>
+                                <td class="cuotas dato">25.000</td>
+                                <td class="cuotas dato">26.000+Mora</td>
+                            </tr>
+                                                                                <tr>
+                                <td class="numero-cuota dato">4</td>
+                                <td class="dato">1-Dec-2022</td>
+                                <td class="cuotas dato">25.000</td>
+                                <td class="cuotas dato">26.000+Mora</td>
+                            </tr>
+                                                    
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="2" class="totales">Total</td>
-                            <td class="totales">$100.000</td>
-                            <td class="totales">$104.000+Mora</td>
+                            <td colspan="2" class="totales dato">Total</td>
+                            <td class="totales dato">$100.000</td>
+                            <td class="totales dato">$104.000+Mora</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -204,7 +225,14 @@
             </div>
 
         </div>
+        <button class="oculto-impresion" onclick="imprimir()">Imprimir</button>
     </div>
+
+    <script>
+        function imprimir() {
+            window.print();
+        }
+    </script>
 
 </body>
 
