@@ -1,366 +1,209 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <style>
-        * {
-            font-size: 12px;
-            font-family: 'DejaVu Sans', serif;
-        }
-
-        h1 {
-            font-size: 18px;
-        }
-
         .ticket {
-            margin: 2px;
+            width: 320px;
+            max-width: 320px;
         }
 
-        td,
-        th,
-        tr,
-        table {
-            border-top: 1px solid black;
-            border-collapse: collapse;
-            margin: 0 auto;
-        }
-
-        td.precio {
-            text-align: right;
-            font-size: 11px;
-        }
-
-        td.cantidad {
-            font-size: 11px;
-        }
-
-        td.producto {
-            text-align: center;
-            margin: 1px;
-        }
-
-        th {
-            text-align: center;
-        }
-
-
-        .centrado {
+        .centrar {
             text-align: center;
             align-content: center;
         }
 
-        .ticket {
-            width: 200px;
-            max-width: 200px;
+        .aliado,
+        .plan-pago,
+        .info-pago,
+        .condiciones,
+        .firma-cliente {
+            margin-bottom: 20px;
         }
 
-        img {
-            max-width: inherit;
-            width: inherit;
+        ul {
+            list-style: none;
+            margin-left: -39px;
         }
 
-        * {
+        .dato-titulo {
+            font-weight: bold;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .dato {
+            font-family: 'Courier New', serif;
+        }
+
+        h2,
+        p {
             margin: 0;
             padding: 0;
         }
 
-        .ticket {
-            margin: 0;
-            padding: 0;
+        .info-cashback,
+        .info-pago1,
+        .info-pago2,
+        .texto-condiciones {
+            text-align: justify;
         }
 
-        body {
+        td,
+        th {
+            border-right: 1px;
+            border-right-style: double;
+        }
+
+        .numero-cuota {
             text-align: center;
         }
 
-        @media  print {
+        .firma-cliente {
+            margin-top: 50px;
+        }
 
-            .oculto-impresion,
-            .oculto-impresion * {
-                display: none !important;
-            }
+        .nombre-cliente {
+            border-top: 1px;
+            border-top-style: double;
+        }
+
+        img {
+            height: 130px;
+        }
+
+        .totales {
+            border-top: 1px;
+            border-top-style: double;
+            text-align: right;
+            font-weight: bold;
+        }
+        .cuotas{
+            text-align: right;
         }
     </style>
-    <script>
-        function imprimir() {
-            window.print();
-
-        }
-    </script>
 </head>
 
 <body>
-    <div class="ticket centrado">
-        <h1>NOMBRE ALMACEN</h1>
-        <h2>Ticket de venta #12</h2>
-        <h2>Fecha: 2022-07-28 09:14:28</h2>
-        <h2>Cajero: admin_aliado1</h2>
-        <h2>Cliente: Pepito Perez</h2>
-        
-        <table>
-            <thead>
-                <tr class="centrado">
-                    <th class="cantidad">Cant.</th>
-                    <th class="producto">Producto</th>
-                    <th class="precio">Precio</th>
-                </tr>
-            </thead>
-            <tbody>
-                                <tr>
-                    <td class="cantidad">2.00</td>
-                    <td class="producto">Jeans</td>
-                    <td class="precio">$50,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Camiseta</td>
-                    <td class="precio">$60,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">3.00</td>
-                    <td class="producto">Zapatos</td>
-                    <td class="precio">$80,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">2.00</td>
-                    <td class="producto">Jeans</td>
-                    <td class="precio">$50,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Camiseta</td>
-                    <td class="precio">$60,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">3.00</td>
-                    <td class="producto">Zapatos</td>
-                    <td class="precio">$80,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                                <tr>
-                    <td class="cantidad">1.00</td>
-                    <td class="producto">Correa de cuero</td>
-                    <td class="precio">$20,000.00</td>
-                </tr>
-                            </tbody>
-            <tr>
-                <td class="cantidad"></td>
-                <td class="producto">
-                    <strong>TOTAL</strong>
-                </td>
-                <td class="precio">
-                    $1,640,000.00                </td>
-            </tr>
-        </table>
-        <p class="centrado">¡GRACIAS POR SU COMPRA!
-            <br>Shivam Colombia
-        </p>
-        <button class="oculto-impresion" onclick="imprimir()">Imprimir</button>
+    <div class="ticket">
+        <div class="encabezado centrar">
+            <div class="logo">
+                <img src="https://images.app.goo.gl/Shy8L5cDxhwVVVVh7" alt="">
+            </div>
+            <div class="aliado">
+                <h2>Comercializadora Arturo Calle S.A.S.</h2>
+                <p>Nit: 900.342.297-2</p>
+            </div>
+            <div class="almacen">
+                <h2>Arturo Calle - Unicentro Cali</h2>
+                <p>Carrera 100 No 5-169 Local 3-33</p>
+                <p>Cali, Valle del Cauca</p>
+                <p>Tel: (604) 523-6784 </p>
+            </div>
+        </div>
+        <div class="cuerpo">
+            <div class="titulo centrar">
+                <h3>Comprobante de Compra a Crédito</h3>
+            </div>
+            <div class="datos-credito">
+                <ul>
+                    <li><span class="dato-titulo">Fecha: </span><span class="dato">2022-08-01 07:44:04</span></li>
+                    <li><span class="dato-titulo">Crédito No.: </span><span class="dato">0023851</span></li>
+                    <li><span class="dato-titulo">Valor del Crédito: </span><span class="dato">$100.000</span></li>
+                    <li><span class="dato-titulo">Deudor: </span><span class="dato">Maria Piedad Perez Perez</span>
+                    </li>
+                    <li><span class="dato-titulo">Tasa Interés: </span><span class="dato">25% E.A.</span></li>
+                    <li><span class="dato-titulo">Número de Cuotas: </span><span class="dato">4</span></li>
+                    <li><span class="dato-titulo">Frecuencia de pago: </span><span class="dato">Mensual</span></li>
+                    <li><span class="dato-titulo">Cashback: </span><span class="dato">$4.000*</span></li>
+                </ul>
+            </div>
+            <div class="info-cashback">
+                * El cliente se hará acreedor de este “Cashback” si paga la totalidad de este crédito el
+                2022-12-01 o antes.
+            </div>
+            <div class="plan-pago">
+                <div class="titulo centrar">
+                    <h3>Plan de Pagos</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cuota</th>
+                            <th>Fecha</th>
+                            <th>A tiempo</th>
+                            <th>Retrasado*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                <tr>
+                            <td class="numero-cuota">1</td>
+                            <td>2022-09-01</td>
+                            <td class="cuotas">$25.000</td>
+                            <td class="cuotas">$26.000+Mora</td>
+                        </tr>
+                                                                        <tr>
+                            <td class="numero-cuota">2</td>
+                            <td>2022-10-01</td>
+                            <td class="cuotas">$25.000</td>
+                            <td class="cuotas">$26.000+Mora</td>
+                        </tr>
+                                                                        <tr>
+                            <td class="numero-cuota">3</td>
+                            <td>2022-11-01</td>
+                            <td class="cuotas">$25.000</td>
+                            <td class="cuotas">$26.000+Mora</td>
+                        </tr>
+                                                                        <tr>
+                            <td class="numero-cuota">4</td>
+                            <td>2022-12-01</td>
+                            <td class="cuotas">$25.000</td>
+                            <td class="cuotas">$26.000+Mora</td>
+                        </tr>
+                                                                       
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" class="totales">Total</td>
+                            <td class="totales">$100.000</td>
+                            <td class="totales">$104.000+Mora</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="pie">
+            <div class="info-pago">
+                <div class="info-pago1">
+                    * Los pagos “Retrasados” se calculan sumando el Capital, los Intereses Corrientes y los Intereses de
+                    Mora. Estos últimos se calculan según los respectivos días de mora.
+                </div>
+                <div class="info-pago2">
+                    ** Podrían aplicar cargos adicionales por gestión de cobranzas.
+                </div>
+            </div>
+            <div class="condiciones">
+                <b>Condiciones:</b>
+                <div class="texto-condiciones">
+                    Ewewew wewew wwewewe wewewe wewew ewewew ewew ewewe ewewew ewewew ewewew ewewe ewewewew ewewew ewewe
+                    ewqewe wewew ewewewewew ewewe ewew wewew ew ew ew e wew ewewew ewe we wewewe we we we w ew ew e we e
+                </div>
+            </div>
+            <div class="firma-cliente">
+                <b class="nombre-cliente">Maria Piedad Perez Perez</b>
+                <p>C.C. 75.345.908</p>
+            </div>
+            <div class="datos-usuario">
+                <p> Usuario: <span class="dato"> 1003456723</span></p>
+                <p>IP: <span class="dato">132.212.102.012</span></p>
+
+            </div>
+
+        </div>
     </div>
 
 </body>
